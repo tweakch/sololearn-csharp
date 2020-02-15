@@ -14,7 +14,7 @@ namespace SoloLearn
             var word = Console.ReadLine();
             var list = Permute(word).Distinct().ToList();
             list.Sort(); 
-            Console.WriteLine(list.IndexOf(word));
+            Console.WriteLine(list.IndexOf(word)+1);
         }
         static List<string> Permute(string word)
         {
