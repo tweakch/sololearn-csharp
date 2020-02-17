@@ -74,7 +74,7 @@ namespace SoloLearn
         static void Main(string[] args)
         {
             var word = Console.ReadLine();
-            var list = word.GetPermutations().Select(c => new string(c.ToArray())).ToList();
+            var list = word.GetPermutations().Select(c => new string(c.ToArray())).Distinct().ToList();
 
             list.Sort();
             Console.WriteLine(list.IndexOf(word) + 1);
